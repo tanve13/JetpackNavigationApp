@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.JetpackNavigationApp" parent="Base.Theme.JetpackNavigationApp" />
+
 </resources>
