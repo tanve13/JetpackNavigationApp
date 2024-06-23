@@ -9,27 +9,25 @@
         android:id="@+id/jetFragment"
         android:name="com.tanveer.jetpacknavigationapp.JetFragment"
         android:label="fragment_jet"
-        tools:layout="@layout/fragment_jet" />
+        tools:layout="@layout/fragment_jet" >
+        <action
+            android:id="@+id/action_jetFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.tanveer.jetpacknavigationapp.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
-            android:id="@+id/action_secondFragment_to_jetFragment"
-            app:destination="@id/jetFragment" />
-        <action
-            android:id="@+id/action_secondFragment_to_jetFragment2"
-            app:destination="@id/jetFragment" />
-        <action
-            android:id="@+id/action_secondFragment_to_jetFragment3"
-            app:destination="@id/jetFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/fade_in"
-            app:popExitAnim="@android:anim/fade_out" />
-        <action
-            android:id="@+id/action_secondFragment_to_jetFragment4"
-            app:destination="@id/jetFragment" />
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/jetFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.tanveer.jetpacknavigationapp.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
 </navigation>
